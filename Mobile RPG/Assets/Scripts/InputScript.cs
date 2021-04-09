@@ -2,21 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class InputScript : MonoBehaviour
 {
     [SerializeField] Joystick joystick;
-    [SerializeField] float playerSpeed;
+    [SerializeField] Entity entity;
 
-    private Rigidbody2D playerRB2D;
+    private MoveScript moveScript;
+    private float speed;
     private Vector2 moveDirection;
 
     private bool isJoystickEnabled = true;
-
-
-
     void Start()
     {
-        playerRB2D = GetComponent<Rigidbody2D>();
+        moveScript = GetComponent<MoveScript>();
+        speed = entity.MoveSpeed;
     }
 
     // Update is called once per frame
@@ -29,13 +28,14 @@ public class PlayerMovement : MonoBehaviour
         {
             EnableDisableJoystick();
         }
+
         switch (isJoystickEnabled)
         {
             case true:
-                Move(joystick.Direction.normalized, playerRB2D.position);
+                moveScript.Move(joystick.Direction.normalized, speed);
                 break;
             case false:
-                Move(moveDirection, playerRB2D.position);
+                moveScript.Move(moveDirection, speed);
                 break;
         }
 
@@ -43,24 +43,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            ResetPosition();
+            moveScript.ResetPosition();
         }
     }
-
-    void Move(Vector2 direction, Vector2 currentLocation)
-    {
-        //playerRB2D.AddForce(direction * playerSpeed * Time.deltaTime, ForceMode2D.Impulse);
-        //playerRB2D.velocity += direction * playerSpeed * Time.deltaTime;
-        playerRB2D.MovePosition(currentLocation + direction * playerSpeed * Time.deltaTime);
-
-    }
-
-    void ResetPosition()
-    {
-        playerRB2D.position = Vector3.zero;
-        playerRB2D.velocity = Vector3.zero;
-    }
-
     void EnableDisableJoystick()
     {
         isJoystickEnabled = !isJoystickEnabled;

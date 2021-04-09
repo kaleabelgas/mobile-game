@@ -364,8 +364,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 712621675}
+  - component: {fileID: 712621682}
   - component: {fileID: 712621678}
   - component: {fileID: 712621679}
+  - component: {fileID: 712621681}
+  - component: {fileID: 712621680}
   - component: {fileID: 712621674}
   - component: {fileID: 712621676}
   - component: {fileID: 712621677}
@@ -490,8 +493,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e77efb63604b2914c9fed1b39a2f49d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystick: {fileID: 64161591}
-  playerSpeed: 20
 --- !u!114 &712621679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,6 +505,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1179fa9daa13dd341865c824e346edbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  entity: {fileID: 11400000, guid: a43b3c6bdf8097549a99641215309b20, type: 2}
+--- !u!114 &712621680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712621673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae27d1058f14c24a8dbb08f16b14e48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &712621681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712621673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76a05b5b60455534da9eae1dab130773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entity: {fileID: 11400000, guid: a43b3c6bdf8097549a99641215309b20, type: 2}
+--- !u!114 &712621682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712621673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3183c92e09c9fde4f8e86fc12b29f314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joystick: {fileID: 64161591}
+  entity: {fileID: 11400000, guid: a43b3c6bdf8097549a99641215309b20, type: 2}
 --- !u!1 &1358814302
 GameObject:
   m_ObjectHideFlags: 0
