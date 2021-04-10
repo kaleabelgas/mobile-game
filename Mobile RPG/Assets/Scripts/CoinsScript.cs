@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(CircleCollider2D))]
 public class CoinsScript : MonoBehaviour
 {
-    private float coinValue;
+    [SerializeField] private float coinValue;
     private CircleCollider2D circleCollider2D;
 
     private void Start()
@@ -16,6 +16,10 @@ public class CoinsScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
+        {
             CurrencyScript.UpdateCoins(coinValue);
+            Destroy(gameObject);
+        }
+
     }
 }

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Mole : EnemyBase
 {
-    [SerializeField] private int secondsToLookForPlayer = 10;
-
     [SerializeField] MoveScript moveScript;
     [SerializeField] HealthScript healthScript;
     [SerializeField] AttackScript attackScript;
@@ -13,7 +11,7 @@ public class Mole : EnemyBase
 
     private void Start()
     {
-        LookForPlayer();
+        CheckIfPlayerExists();
     }
     void Update()
     {

@@ -7,7 +7,7 @@ public abstract class EnemyBase : MonoBehaviour
     protected Player player;
     protected bool playerFound = false;
     
-    protected void LookForPlayer()
+    protected void CheckIfPlayerExists()
     {
         player = FindObjectOfType<Player>();
         if (player != null)
