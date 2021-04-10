@@ -4,18 +4,11 @@ using UnityEngine;
 
 public class HealthScript : MonoBehaviour
 {
-    [SerializeField] private Entity entity;
-
-    private int entityHealth;
-
-    private void Start()
-    {
-        entityHealth = entity.Health;
-    }
+    public int EntityHealth { get; set; }
     public void GetDamaged(int damage)
     {
-        entityHealth -= damage;
-        if (entityHealth <= 0)
+        EntityHealth -= damage;
+        if (EntityHealth <= 0)
         {
             Die();
         }
@@ -24,14 +17,11 @@ public class HealthScript : MonoBehaviour
 
     public void Heal(int healAmount)
     {
-        entityHealth += healAmount;
+        EntityHealth += healAmount;
     }
 
     public void Die()
     {
         Debug.Log("me ded");
-    }
-    public int EntityHealth {
-        get { return entityHealth; }
     }
 }

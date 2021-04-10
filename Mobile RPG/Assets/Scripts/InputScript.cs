@@ -2,42 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(MoveScript))]
 public class InputScript : MonoBehaviour
 {
     [SerializeField] Joystick joystick;
-    [SerializeField] Entity entity;
 
     private MoveScript moveScript;
-    private float speed;
     private Vector2 moveDirection;
 
     private bool isJoystickEnabled = true;
+    public int Speed { get; set; }
+
     void Start()
     {
         moveScript = GetComponent<MoveScript>();
-        speed = entity.MoveSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
         //temp code
-        moveDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        //moveDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+
+        moveDirection.x = Input.GetAxisRaw("Horizontal");
+        moveDirection.y = Input.GetAxisRaw("Vertical");
+        moveDirection.Normalize();
 
         if (Input.GetKeyDown(KeyCode.J))
         {
             EnableDisableJoystick();
         }
 
-        switch (isJoystickEnabled)
-        {
-            case true:
-                moveScript.Move(joystick.Direction.normalized, speed);
-                break;
-            case false:
-                moveScript.Move(moveDirection, speed);
-                break;
-        }
+        moveScript.Move(isJoystickEnabled ? joystick.Direction.normalized : moveDirection, Speed);
 
         Debug.Log(joystick.Direction);
 
@@ -50,4 +46,5 @@ public class InputScript : MonoBehaviour
     {
         isJoystickEnabled = !isJoystickEnabled;
     }
+
 }

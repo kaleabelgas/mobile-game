@@ -1,17 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class ExperienceScript : MonoBehaviour
+public class ExperienceScript
 {
-    private float experience;
+    static private float experience;
 
-    public void AddExp(float amount)
+    public static void AddExp(float amount)
     {
         experience += amount;
     }
-    public float Exerience
-    {
-        get { return experience; }
-    }
+    public static float Exerience => experience;
 }

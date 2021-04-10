@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Mole
   Health: 20
-  MoveSpeed: 10
+  MoveSpeed: 5
   StrengthValue: 10

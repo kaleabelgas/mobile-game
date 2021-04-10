@@ -10,18 +10,14 @@ public class Mole : EnemyBase
     [SerializeField] HealthScript healthScript;
     [SerializeField] AttackScript attackScript;
     [SerializeField] Entity entity;
-    void Start()
-    {
-        
-    }
 
+    private void Start()
+    {
+        LookForPlayer();
+    }
     void Update()
     {
-
-        //VERY basic AI
-        if (!playerFound)
-            StartCoroutine(LookForPlayer(secondsToLookForPlayer));
-        if (playerFound)
+        if(playerFound)
             moveScript.Move(player.transform.position - transform.position, entity.MoveSpeed);
     }
 }

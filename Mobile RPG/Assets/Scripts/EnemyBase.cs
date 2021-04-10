@@ -4,22 +4,19 @@ using UnityEngine;
 
 public abstract class EnemyBase : MonoBehaviour
 {
-    
-
     protected Player player;
     protected bool playerFound = false;
     
-    protected IEnumerator LookForPlayer(int timeToLookForPlayer)
+    protected void LookForPlayer()
     {
         player = FindObjectOfType<Player>();
         if (player != null)
         {
             playerFound = true;
             Debug.Log("Player Found!");
-            yield return null;
         }
         else
-            yield return new WaitForSeconds(timeToLookForPlayer);
+            Debug.Log("No Player Found!");
     }
 }
 

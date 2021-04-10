@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class MoveScript : MonoBehaviour
 {
     private Rigidbody2D entityRB2D;
@@ -14,7 +15,6 @@ public class MoveScript : MonoBehaviour
     public void Move(Vector2 direction, float speed)
     {
         entityRB2D.MovePosition(entityRB2D.position + direction * speed * Time.deltaTime);
-        //Debug.Log("moving: " + direction + speed);
     }
 
     public void ResetPosition()

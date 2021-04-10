@@ -4,19 +4,12 @@ using UnityEngine;
 
 public class AttackScript : MonoBehaviour
 {
-    [SerializeField] private Entity entity;
     private bool isNearEnemy;
+    public int Strength { get; set; }
 
-    private int strength;
-
-    private void Start()
-    {
-        strength = entity.StrengthValue;
-    }
     public void DoAttack()
     {
-        Debug.Log("Attacked!" + strength);
+        Debug.Log("Attacked!" + Strength);
     }
 
-    
 }

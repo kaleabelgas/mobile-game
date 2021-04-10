@@ -1,37 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class CurrencyScript : MonoBehaviour
+public class CurrencyScript
 {
-    private float coins;
-    private float gems;
+    private static float coinsAmount;
+    private static float gemsAmount;
 
-    public void AddCoins(float amount)
+    public static void UpdateCoins(float amount)
     {
-        coins += amount;
-    }
-
-    public void SubtractCoins(float amount)
-    {
-        coins -= amount;
+        coinsAmount += amount;
     }
 
-    public void AddGems(float amount)
+    public static void UpdateGems(float amount)
     {
-        gems += amount;
-    }
-    public void SubtractGems(float amount)
-    {
-        gems -= amount;
+        gemsAmount += amount;
     }
 
-    public float Coins
-    {
-        get { return coins; }
-    }
-    public float Gems
-    {
-        get { return gems; }
-    }
+    public static float Coins => coinsAmount;
+    public static float Gems => gemsAmount;
 }
