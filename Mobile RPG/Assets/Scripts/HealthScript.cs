@@ -23,5 +23,6 @@ public class HealthScript : MonoBehaviour
     public void Die()
     {
         Debug.Log("me ded");
+        Destroy(gameObject);
     }
 }

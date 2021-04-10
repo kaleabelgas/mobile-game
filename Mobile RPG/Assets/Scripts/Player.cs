@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     [SerializeField] private MoveScript moveScript;
     [SerializeField] private AttackScript attackScript;
     [SerializeField] private Weapon weapon;
+
+    [SerializeField] private Transform weaponTransform;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +21,16 @@ public class Player : MonoBehaviour
         attackScript = GetComponent<AttackScript>();
 
         healthScript.EntityHealth = player.Health;
+
+        weapon.AssignTransform(weaponTransform);
+
         attackScript.Strength = player.StrengthValue + weapon.AttackValue;
+        attackScript.AttackRange = weapon.AttackRange;
+        attackScript.WeaponTransform = weapon.WeaponTransform;
+        attackScript.EnemyMask = weapon.EnemyMask;
+
         inputScript.Speed = player.MoveSpeed;
+
     }
 
     // Update is called once per frame

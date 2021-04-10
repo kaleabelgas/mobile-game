@@ -34,7 +34,7 @@ public class InputScript : MonoBehaviour
         }
 
 
-        Debug.Log(joystick.Direction);
+        //Debug.Log(joystick.Direction);
 
         if (Input.GetKeyDown(KeyCode.R))
         {

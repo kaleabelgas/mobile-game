@@ -7,15 +7,16 @@ public class Mole : EnemyBase
     [SerializeField] MoveScript moveScript;
     [SerializeField] HealthScript healthScript;
     [SerializeField] AttackScript attackScript;
-    [SerializeField] Entity entity;
+    [SerializeField] Entity mole;
 
-    private void Start()
+    protected override void Start()
     {
-        CheckIfPlayerExists();
+        base.Start();
+        healthScript.EntityHealth = mole.Health;
     }
     void FixedUpdate()
     {
         if(playerFound)
-            moveScript.Move(player.transform.position - transform.position, entity.MoveSpeed);
+            moveScript.Move(player.transform.position - transform.position, mole.MoveSpeed);
     }
 }

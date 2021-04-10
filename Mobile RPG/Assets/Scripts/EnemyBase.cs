@@ -6,6 +6,11 @@ public abstract class EnemyBase : MonoBehaviour
 {
     protected Player player;
     protected bool playerFound = false;
+
+    protected virtual void Start()
+    {
+        CheckIfPlayerExists();
+    }
     
     protected void CheckIfPlayerExists()
     {

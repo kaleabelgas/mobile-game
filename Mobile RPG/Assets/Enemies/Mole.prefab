@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 1053284137566739805}
   - component: {fileID: 1053284137566739798}
   - component: {fileID: 1053284137566739799}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mole
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
   moveScript: {fileID: 1053284137566739793}
   healthScript: {fileID: 1053284137566739794}
   attackScript: {fileID: 1053284137566739795}
-  entity: {fileID: 11400000, guid: 49f6dad43a074b5448ce0ba5e3bffcf2, type: 2}
+  mole: {fileID: 11400000, guid: 49f6dad43a074b5448ce0ba5e3bffcf2, type: 2}
 --- !u!114 &1053284137566739793
 MonoBehaviour:
   m_ObjectHideFlags: 0
