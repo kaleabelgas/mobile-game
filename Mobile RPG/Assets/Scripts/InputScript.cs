@@ -33,7 +33,6 @@ public class InputScript : MonoBehaviour
             EnableDisableJoystick();
         }
 
-        moveScript.Move(isJoystickEnabled ? joystick.Direction.normalized : moveDirection, Speed);
 
         Debug.Log(joystick.Direction);
 
@@ -41,6 +40,13 @@ public class InputScript : MonoBehaviour
         {
             moveScript.ResetPosition();
         }
+
+
+    }
+    private void FixedUpdate()
+    {
+
+        moveScript.Move(isJoystickEnabled ? joystick.Direction.normalized : moveDirection, Speed);
     }
     void EnableDisableJoystick()
     {

@@ -13,7 +13,7 @@ public class Mole : EnemyBase
     {
         CheckIfPlayerExists();
     }
-    void Update()
+    void FixedUpdate()
     {
         if(playerFound)
             moveScript.Move(player.transform.position - transform.position, entity.MoveSpeed);
