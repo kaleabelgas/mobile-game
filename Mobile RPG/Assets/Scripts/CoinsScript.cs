@@ -6,12 +6,6 @@ using UnityEngine;
 public class CoinsScript : MonoBehaviour
 {
     [SerializeField] private float coinValue;
-    private CircleCollider2D circleCollider2D;
-
-    private void Start()
-    {
-        circleCollider2D = GetComponent<CircleCollider2D>();
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
