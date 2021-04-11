@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1053284137566739793}
   - component: {fileID: 1053284137566739794}
   - component: {fileID: 1053284137566739795}
+  - component: {fileID: -4586653017209698072}
   - component: {fileID: 1053284137566739805}
   - component: {fileID: 1053284137566739798}
   - component: {fileID: 1053284137566739799}
@@ -77,6 +78,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a05b5b60455534da9eae1dab130773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -4586653017209698072}
+        m_TargetAssemblyTypeName: RewardsDropper, Assembly-CSharp
+        m_MethodName: DropCoins
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: -4586653017209698072}
+        m_TargetAssemblyTypeName: RewardsDropper, Assembly-CSharp
+        m_MethodName: DropExp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1053284137566739795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,6 +117,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1179fa9daa13dd341865c824e346edbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4586653017209698072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053284137566739806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3795385b2f176454d9899d52ccd897ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewards: {fileID: 11400000, guid: 53ce76c002a6bb740901e4d01785fbf0, type: 2}
+  coin: {fileID: 5161709025062285059, guid: 1cc617ec4932936499e5edcfcfa50f5b, type: 3}
+  experience: {fileID: 5161709025062285059, guid: 1cc617ec4932936499e5edcfcfa50f5b, type: 3}
 --- !u!212 &1053284137566739805
 SpriteRenderer:
   m_ObjectHideFlags: 0

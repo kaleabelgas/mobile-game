@@ -97,6 +97,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinValue: 10
+  CoinAbsorbed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2728803618436744477, guid: 8f873c4d8d75b104b9b9053d9b5611d6, type: 3}
+        m_TargetAssemblyTypeName: ScoreUpdaterUI, Assembly-CSharp
+        m_MethodName: UpdateCoinsUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!58 &5161709025062285056
 CircleCollider2D:
   m_ObjectHideFlags: 0

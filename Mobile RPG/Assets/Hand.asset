@@ -14,3 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Hand
   AttackValue: 5
+  AttackRange: 0.5
+  WeaponTransform: {fileID: 0}
+  EnemyMask:
+    serializedVersion: 2
+    m_Bits: 128

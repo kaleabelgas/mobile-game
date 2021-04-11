@@ -9,16 +9,16 @@ public class Player : MonoBehaviour
     [SerializeField] private HealthScript healthScript;
     [SerializeField] private InputScript inputScript;
     [SerializeField] private MoveScript moveScript;
-    [SerializeField] private AttackScript attackScript;
+    [SerializeField] private MeleeAttackScript attackScript;
     [SerializeField] private Weapon weapon;
 
     [SerializeField] private Transform weaponTransform;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         healthScript = GetComponent<HealthScript>();
         inputScript = GetComponent<InputScript>();
-        attackScript = GetComponent<AttackScript>();
+        attackScript = GetComponent<MeleeAttackScript>();
 
         healthScript.EntityHealth = player.Health;
 

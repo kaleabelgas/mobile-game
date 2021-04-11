@@ -6,7 +6,7 @@ public class Mole : EnemyBase
 {
     [SerializeField] MoveScript moveScript;
     [SerializeField] HealthScript healthScript;
-    [SerializeField] AttackScript attackScript;
+    [SerializeField] MeleeAttackScript attackScript;
     [SerializeField] Entity mole;
 
     protected override void Start()

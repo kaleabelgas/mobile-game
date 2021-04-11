@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackScript : MonoBehaviour
+public class MeleeAttackScript : MonoBehaviour
 {
     public Transform WeaponTransform { get; set; }
     public LayerMask EnemyMask { get; set; }
