@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(MoveScript))]
 public class InputScript : MonoBehaviour
 {
-    [SerializeField] Joystick joystick;
+    Joystick joystick;
 
     private MoveScript moveScript;
     private Vector2 moveDirection;
@@ -16,6 +16,7 @@ public class InputScript : MonoBehaviour
     void Start()
     {
         moveScript = GetComponent<MoveScript>();
+        joystick = FindObjectOfType<Joystick>();
     }
 
     // Update is called once per frame
