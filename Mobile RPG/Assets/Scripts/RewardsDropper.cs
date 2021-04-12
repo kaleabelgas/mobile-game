@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(HealthScript))]
 public class RewardsDropper : MonoBehaviour
 {
     [SerializeField] RewardsAmount rewards;
@@ -8,10 +9,15 @@ public class RewardsDropper : MonoBehaviour
 
     private int amountOfCoinsToDrop;
     private int amountOfExpToDrop;
+    private HealthScript healthScript;
     private void Start()
     {
+        healthScript = GetComponent<HealthScript>();
         amountOfExpToDrop = rewards.Experience;
         amountOfCoinsToDrop = rewards.Coins;
+
+        healthScript.OnDeath += DropCoins;
+        healthScript.OnDeath += DropExp;
     }
 
     public void DropCoins()

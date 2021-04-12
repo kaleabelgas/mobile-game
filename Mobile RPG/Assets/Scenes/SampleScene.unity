@@ -236,33 +236,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a05b5b60455534da9eae1dab130773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5676482999512244499}
-        m_TargetAssemblyTypeName: RewardsDropper, Assembly-CSharp
-        m_MethodName: DropCoins
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 5676482999512244499}
-        m_TargetAssemblyTypeName: RewardsDropper, Assembly-CSharp
-        m_MethodName: DropExp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &226407594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,8 +384,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ActionButtonEventListener, Assembly-CSharp
+      - m_Target: {fileID: 712621680}
+        m_TargetAssemblyTypeName: PlayerEventHandler, Assembly-CSharp
         m_MethodName: ActionButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -743,21 +716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26cd2e5f6d34b194b89626cd36faf0a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnActionButtonPressed:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 712621679}
-        m_TargetAssemblyTypeName: AttackScript, Assembly-CSharp
-        m_MethodName: DoAttack
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  canvas: {fileID: 1358814302}
 --- !u!114 &712621681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -770,9 +729,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a05b5b60455534da9eae1dab130773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &712621682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41836,7 +41792,7 @@ GameObject:
   - component: {fileID: 1358814307}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

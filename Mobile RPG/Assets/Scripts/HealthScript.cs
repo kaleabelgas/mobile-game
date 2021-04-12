@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class HealthScript : MonoBehaviour
 {
-    public UnityEvent OnDeath;
+    public event Action OnDeath;
     public int EntityHealth { get; set; }
     public void GetDamaged(int damage)
     {
@@ -14,7 +12,6 @@ public class HealthScript : MonoBehaviour
         {
             Die();
         }
-        //TODO: event
     }
 
     public void Heal(int healAmount)
@@ -26,6 +23,6 @@ public class HealthScript : MonoBehaviour
     {
         Debug.Log("me ded");
         OnDeath?.Invoke();
-        //Destroy(gameObject);
+        //Destroy(gameObject, 0.1f);
     }
 }

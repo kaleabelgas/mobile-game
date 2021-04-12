@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Mole Rewards
   m_EditorClassIdentifier: 
   Coins: 5
-  Experience: 1
+  Experience: 0
